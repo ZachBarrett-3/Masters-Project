@@ -1,0 +1,98 @@
+------------------------------------------
+Create a table to store all adult pneumonia patient demographic, admission information
+------------------------------------------
+CREATE TABLE pneumonia_patients(
+    SUBJECT_ID VARCHAR(10),
+    HADM_ID VARCHAR(10),
+    DIAGNOSIS VARCHAR(30),
+    ADMITTIME VARCHAR(40),
+    ADMIT VARCHAR(20),
+    TIME VARCHAR(20),
+    DOB VARCHAR(20),
+    AGE VARCHAR(10),
+    ADMISSION_TYPE VARCHAR(40),
+    ADMISSION_LOCATION VARCHAR(40),
+    INSURANCE VARCHAR(30),
+    MARITAL_STATUS VARCHAR(40),
+    ETHNICITY VARCHAR(40),
+    HOSPITAL_EXPIRE_FLAG VARCHAR(5),
+    INTUBATED VARCHAR(5)
+);
+
+
+------------------------------------------
+Create a table to store the vital signs of all pneumonia patients (adults)
+------------------------------------------
+CREATE TABLE pneumonia_vitals(
+    ROW_ID VARCHAR(10),
+    SUBJECT_ID VARCHAR(10),
+    HADM_ID VARCHAR(10),
+    ICUSTAY_ID VARCHAR(10),
+    ITEMID VARCHAR(10),
+   CHARTTIME VARCHAR(200),
+    STORETIME VARCHAR(200),
+    CGID VARCHAR(10),
+    VALUE VARCHAR(30),
+    VALUENUM VARCHAR(30),
+    VALUEUOM VARCHAR(30),
+    WARNING VARCHAR(10),
+   ERROR VARCHAR(10),
+   RESULTSTATUS VARCHAR(100),
+    STOPPED VARCHAR(100)    
+);
+
+
+------------------------------------------
+This query returns the admission and demographic information on adult patients who were diagnosed with pneumonia. I chose to store the results of this query in the pneumonia_patients table created above. 
+------------------------------------------
+SELECT  ad.SUBJECT_ID, 
+	ad.HADM_ID, 
+	ad.DIAGNOSIS,
+        ad.ADMITTIME,
+        substring(ad.ADMITTIME, 1, 10) as admit,
+        substring(ad.ADMITTIME, 12, 8) as time,
+        substring(pt.DOB, 1, 10) as dob,
+        round(((JULIANDAY(substring(ad.ADMITTIME, 1, 10)) - JULIANDAY(substring(pt.DOB, 1, 10)))/365.25),2) AS age,
+        ad.admission_type,
+        ad.admission_location,
+        ad.insurance,
+        ad.marital_status,
+        ad.ethnicity,
+        ad.hospital_expire_flag,
+        intub.INTUBATED
+from admissions ad 
+inner join patients pt 
+    on ad.SUBJECT_ID = pt.SUBJECT_ID
+LEFT JOIN (
+		select HADM_ID, 
+		SUBJECT_ID,
+    		MAX(
+    			CASE
+			WHEN ICD9_CODE = 9604 then 1
+        		else NULL
+    			END   
+    		) as Intubated
+		from procedures_icd
+		group by HADM_ID
+) intub
+	on intub.HADM_ID = ad.HADM_ID
+	WHERE ad.diagnosis like "PNEUMONIA"
+	AND age < 65
+	order by age;
+
+
+------------------------------------------
+This query returns the specified vital sign metrics for the adults diagnosed with pneumonia, that I stored in the pneumonia_patients table. The MIMIC-III database contains ICD-9 and ICD-10 codes, so that is why there are two codes for each type of reading. I chose to store this information in the pneumonia_vitals table created above. 
+------------------------------------------
+select * from mimic3.chartevents
+where ITEMID in (
+    211, 220045,--Heart Rate
+    646, 220227,-- Sp02
+    8368, 220051,--Arterial BP Diastolic
+    51, 220050,--Arterial BP Systolic
+    615, 224690 --Total respirations
+)
+AND HADM_ID IN (
+    SELECT HADM_ID FROM pneumonia_patients)
+AND SUBJECT_ID IN (
+    SELECT SUBJECT_ID FROM pneumonia_patients);
