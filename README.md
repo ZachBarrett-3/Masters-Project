@@ -6,6 +6,4 @@ You will need to complete a training regarding data security and sharing of the 
 
 https://physionet.org/content/mimiciii/1.4/
 
-```
-
 [Google](http://www.google.com/)
