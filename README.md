@@ -1,3 +1,9 @@
+
+This code accompanies my research paper which is linked `Barrett_Final_Draft.pdf`
+
+
+
+
 # Predicting Endotracheal Intubation using Deep Learning
 
 Step 1: Obtain access to the MIMIC-III Clinical Database
