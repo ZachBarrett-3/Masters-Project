@@ -12,7 +12,7 @@ This project evaluates traditional methods, such as decision trees, as well as d
 Before running the code in this repository, you will need to gain access to the [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/). Access to the database requires completing a brief training and accepting to a data privacy agreement. Once you are credentialed, you can request access to the database through your physionet account. There are multiple methods to connect to the MIMIC-III database, two of which are through AWS or BigQuery.
 
 ## Patient Vitals Extraction
-For this project it is critical to extract all adults that were diagnosed with pneumonia upon admission to the ICU. In the `SQL_Queries` file, you will find some queries that helped me achieve this in a local database setting. Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
+For this project it is critical to extract all adults that were diagnosed with pneumonia upon admission to the ICU. In the `SQL_Queries.txt` file, you will find some queries that helped me achieve this in a local database setting. Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
 
 ## Data processing and aggregation
 The data processing and aggregation tasks are accomplished within the `Data_Prep.ipynb` Jupyter notebook. This notebook executes one specific action per code block and saves the current state of processed medical records, helping facilitate efficient data validation and error troubleshooting. 
