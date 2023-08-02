@@ -23,4 +23,4 @@ We implemented the following Deep-Learning frameworks within the `Model_Building
 - Long Short-Term Memory Network (LSTM)
 - Multi-layer Perceptron Network (MLP)
 
-After training the models, we conducted a performance comparison with traditional medical modeling methodologies. The results of that comparison can be found in `Barrett_Final_Draft.pdf`. 
+After training the models, we conducted a performance comparison with traditional medical modeling methodologies. Details on that comparison can be found in `Barrett_Final_Draft.pdf`. 
