@@ -15,9 +15,19 @@ https://physionet.org/content/mimiciii/1.4/
 [Google](http://www.google.com/)
 
 
+
+
+The goal of pre-processing is to get an output file formatted similarly to `sample_pneumonia_reduced_vitals.csv`.
+
+
 ### Data processing and aggregation
-`Data_Prep.ipnyb`
+The data processing and aggregation tasks are accomplished within the `Data_Prep.ipynb` Jupyter notebook. This notebook is organized to execute one specific action per code block, making it easier to troubleshoot any issues that may arise. Throughout the notebook, most steps save the current status of medical records into designated folders, providing a convenient way to verify and review the progress of the data processing tasks.
+
 
 ### Model implementation and evaluation
 
-`Model_Building.ipnyb`
+We implemented the following Deep-Learning frameworks within the `Model_Building.ipnyb` Jupyter notebook:
+- Long Short-Term Memory Network (LSTM)
+- Multi-layer Perceptron Network (MLP)
+
+After training the models, we conducted a performance comparison with traditional medical modeling methodologies. The results of that comparison can be found in `Barrett_Final_Draft.pdf`. 
