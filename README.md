@@ -2,9 +2,7 @@
 
 The code in this repository accompanies my research paper `Barrett_Final_Draft.pdf`. The primary objective with this repository is to provide transparency and reproducibility for the results presented in this paper. By sharing this code, I hope to encourage further research into the field of predictive medicine for ICU patients with pneumonia. 
 
-# Code
-
-## Pre-processing
+## Data Pre-processing
 
 Before running the code in this repository, you will need to gain access to the [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/). Access to the database requires completing a brief training and accepting to a data privacy agreement. Once you are credentialed, you can request access to the database through your physionet account.
 
