@@ -6,7 +6,9 @@ The code in this repository accompanies my research paper `Barrett_Final_Draft.p
 
 Before running the code in this repository, you will need to gain access to the [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/). Access to the database requires completing a brief training and accepting to a data privacy agreement. Once you are credentialed, you can request access to the database through your physionet account.
 
-There are multiple methods to connect to the MIMIC-III database, two of which are through AWS or BigQuery. During the course of this project, I constructed my own local SQL database using files downloaded from physionet. To accomplish this project's objectives, it is crucial to extract data for all adults diagnosed with pneumonia upon admission to the ICU and retrieve their associated vital sign readings. In the `SQL_Queries` file, you will find some queries that aided me in achieving this in a local database setting. Depending on how you are connecting to the data source, your process may differ but will be similar to the one outlined there.
+There are multiple methods to connect to the MIMIC-III database, two of which are through AWS or BigQuery. During the course of this project, I constructed my own local SQL database using files downloaded from physionet. 
+
+To accomplish this project's objectives, it is crucial to extract data for all adults diagnosed with pneumonia upon admission to the ICU and retrieve their associated vital sign readings. In the `SQL_Queries` file, you will find some queries that aided me in achieving this in a local database setting. Depending on how you are connecting to the data source, your process may differ but will be similar to the one outlined there.
 
 Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
 
