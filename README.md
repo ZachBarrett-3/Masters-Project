@@ -4,9 +4,9 @@ The code in this repository accompanies my research paper `Barrett_Final_Draft.p
 
 ## Project Abstract
 
-Pneumonia is a leading cause for admission to intensive care units (ICUs). Critically ill patients suffering from lung diseases often require endotracheal intubation to assist or regulate their breathing. Equipping healthcare professionals with accurate predictions of intubation likelihood leads to better anticipation critical events, more effective allocation medical resources, and improved patient outcomes.
+Pneumonia is a leading cause for admission to intensive care units (ICUs). Critically ill patients suffering from lung diseases often require endotracheal intubation to assist or regulate their breathing. Equipping healthcare professionals with accurate predictions of intubation likelihood leads to better anticipation critical events, more effective allocation medical resources, and improved patient outcomes.
 
-This paper evaluates traditional methods, such as decision trees, as well as deep learning models, including long short-term memory (LSTM) networks, in predicting the likelihood of intubation among ICU patients with pneumonia. We utilize medical data sourced from the MIMIC-III database. Specifically, we extract the vital signs recorded during the initial four hours following patients’ admission to the hospital. By focusing on this critical time frame, we aim to capture early indicators and patterns that may be informative for predicting the need for intubation among pneumonia patients in the ICU.
+This project evaluates traditional methods, such as decision trees, as well as deep learning models, including long short-term memory (LSTM) networks, in predicting the likelihood of intubation among ICU patients with pneumonia. We utilize medical data sourced from the MIMIC-III database. Specifically, we extract the vital signs recorded during the initial four hours following patients’ admission to the hospital. By focusing on this critical time frame, we aim to capture early indicators and patterns that may be informative for predicting the need for intubation among pneumonia patients in the ICU.
 
 
 
