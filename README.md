@@ -12,11 +12,11 @@ This project evaluates traditional methods, such as decision trees, as well as d
 
 ## Database Access
 
-Before running the code in this repository, you will need to gain access to the [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/). Access to the database requires completing a brief training and accepting to a data privacy agreement. Once you are credentialed, you can request access to the database through your physionet account. There are multiple methods to connect to the MIMIC-III database, two of which are through AWS or BigQuery. During the course of this project, I constructed my own local SQL database using files downloaded from physionet. 
+Before running the code in this repository, you will need to gain access to the [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/). Access to the database requires completing a brief training and accepting to a data privacy agreement. Once you are credentialed, you can request access to the database through your physionet account. There are multiple methods to connect to the MIMIC-III database, two of which are through AWS or BigQuery.
 
 ## Patient Vitals Extraction
 
-For this project it is critical to extract all adults that were diagnosed with pneumonia upon admission to the ICU. In the `SQL_Queries` file, you will find some queries that aided me in achieving this in a local database setting. Depending on how you are connecting to the data source, your process may differ but will be similar to the one outlined there. Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
+For this project it is critical to extract all adults that were diagnosed with pneumonia upon admission to the ICU. In the `SQL_Queries` file, you will find some queries that helped me achieve this in a local database setting. Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
 
 ## Data processing and aggregation
 The data processing and aggregation tasks are accomplished within the `Data_Prep.ipynb` Jupyter notebook. This notebook is organized to execute one specific action per code block, making it easier to troubleshoot any issues that may arise. Throughout the notebook, most steps save the current status of medical records into designated folders, providing a convenient way to verify and review the progress of the data processing tasks.
