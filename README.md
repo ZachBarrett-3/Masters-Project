@@ -1,6 +1,6 @@
 # Predicting Endotracheal Intubation using Deep Learning
 
-The code in this repository accompanies my research paper `Barrett_Final_Draft.pdf`. The primary objective with this repository is to provide transparency and reproducibility for the results presented in this paper. By sharing this code, I hope to encourage further research into the field of predictive medicine for ICU patients with pneumonia. 
+The code in this repository accompanies my research paper `Barrett_Final_Draft.pdf`. The primary objective with this repository is to provide transparency and reproducibility for the results presented in this paper. By sharing this code, I hope to encourage and inspire further research into the field of predictive medicine. 
 
 ## Database Access
 
