@@ -8,7 +8,7 @@ Before running the code in this repository, you will need to gain access to the 
 
 ## Patient Vitals Extraction
 
-To accomplish this project's objectives, it is crucial to extract data for all adults diagnosed with pneumonia upon admission to the ICU and retrieve their associated vital sign readings. In the `SQL_Queries` file, you will find some queries that aided me in achieving this in a local database setting. Depending on how you are connecting to the data source, your process may differ but will be similar to the one outlined there. Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
+For this project it is critical to extract all adults that were diagnosed with pneumonia upon admission to the ICU. In the `SQL_Queries` file, you will find some queries that aided me in achieving this in a local database setting. Depending on how you are connecting to the data source, your process may differ but will be similar to the one outlined there. Once you have successfully extracted all patient vital signs, you will have a file formatted similarly to the sample file `sample_pneumonia_reduced_vitals.csv`.
 
 ## Data processing and aggregation
 The data processing and aggregation tasks are accomplished within the `Data_Prep.ipynb` Jupyter notebook. This notebook is organized to execute one specific action per code block, making it easier to troubleshoot any issues that may arise. Throughout the notebook, most steps save the current status of medical records into designated folders, providing a convenient way to verify and review the progress of the data processing tasks.
