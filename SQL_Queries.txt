@@ -43,7 +43,8 @@ CREATE TABLE pneumonia_vitals(
 
 
 ------------------------------------------
-This query returns the admission and demographic information on adult patients who were diagnosed with pneumonia. I chose to store the results of this query in the pneumonia_patients table created above. 
+This query returns the admission and demographic information on adult patients who were diagnosed with pneumonia. 
+I chose to store the results of this query in the pneumonia_patients table created above. 
 ------------------------------------------
 SELECT  ad.SUBJECT_ID, 
 	ad.HADM_ID, 
@@ -82,7 +83,9 @@ LEFT JOIN (
 
 
 ------------------------------------------
-This query returns the specified vital sign metrics for the adults diagnosed with pneumonia, that I stored in the pneumonia_patients table. The MIMIC-III database contains ICD-9 and ICD-10 codes, so that is why there are two codes for each type of reading. I chose to store this information in the pneumonia_vitals table created above. 
+This query returns the specified vital sign metrics for the adults diagnosed with pneumonia, that I stored in the pneumonia_patients table. 
+The MIMIC-III database contains ICD-9 and ICD-10 codes, so that is why there are two codes for each type of reading. 
+I chose to store this information in the pneumonia_vitals table created above. 
 ------------------------------------------
 select * from mimic3.chartevents
 where ITEMID in (
