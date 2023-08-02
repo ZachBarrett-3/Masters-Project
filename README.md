@@ -1,10 +1,6 @@
 # Predicting Endotracheal Intubation using Deep Learning
 
-
-This code accompanies my research paper which is linked `Barrett_Final_Draft.pdf`
-
-
-
+The code in this repository accompanies my research paper which is linked `Barrett_Final_Draft.pdf`. The primary objective with this repository is to provide transparency and reproducibility for the results presented in this paper. By sharing this code, I hope to encourage further research into the field of predictive medicine for ICU patients with pneumonia. 
 
 ## Code
 
@@ -17,3 +13,11 @@ You will need to complete a training regarding data security and sharing of the 
 https://physionet.org/content/mimiciii/1.4/
 
 [Google](http://www.google.com/)
+
+
+### Data processing and aggregation
+`Data_Prep.ipnyb`
+
+### Model implementation and evaluation
+
+`Model_Building.ipnyb`
